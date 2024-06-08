@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>HTML|CSS QUIZ</title>
+    <link rel="stylesheet" content="text/css" href="quiz.css">
+  </head>
+  <body>
+	<header>
+	  <h2>HTML/CSS quiz</h2>
+    </header>
+    <nav id="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+    </nav>
+    <main>
+	<form>
+	<p>Enter Your carditinal here:</p>
+      <div class="name info">
+        <label for="name">Name: </label>
+        <input type="text" placeholder="Enter Your Name" required id="name" minlength="10" maxlength="25">
+      </div>
+      <div class="school info">
+        <label for="school">School: </label>
+        <input type="text" placeholder="Enter your school name" required id="school" minlength="5" maxlength="25">
+      </div>
+      <div class="birth info">
+        <label for="birth">Birthday: </label>
+        <input type="date" required id="birth">
+      </div>
+    <hr>
+    <section>
+		<h2>QUESTIONS:</h2>
+	    <div class="q1-a1">
+	      <fieldset class="f1">
+            <legend>What's type of HTML and CSS Language?</legend>
+            <label class="block" for="a1-1"><input type="radio" name="a1" id="a1-1" required> Markup languages.</label>
+            <label class="block" for="a1-2"><input type="radio" name="a1" id="a1-2" required> Scripting Languages.</label>
+            <label class="block" for="a1-3"><input type="radio" name="a1" id="a1-3"  required> Programming languages.</label>
+          </fieldset>
+        </div><br>
+        <div class="q2-a2">
+          <fieldset class="f2">
+            <legend>How many the headers are in the HTML Languges?</legend>
+            <label class="block" for="a2-1"><input type="radio" name="a2" id="a2-1" required> 4</label>
+            <label class="block" for="a2-2"><input type="radio" name="a2" id="a2-2" required> 6</label>
+            <label class="block" for="a2-3"><input type="radio" name="a2" id="a2-3" required> 2</label>
+          </fieldset>  
+        </div><br>
+        <div>
+          <fieldset class="f3">
+            <legend>Does really the libraries help done your works better?</legend>
+            <label class="block" for="a3-1"><input type="radio" name="a3" id="a3-1" required>Yes.</label>
+            <label class="block" for="a3-2"><input type="radio" name="a3" id="a3-2" required>No.</label>
+            <label class="block" for="a3-3"><input type="radio" name="a3" id="a3-3" required>Maybe.</label>
+          </fieldset>
+        </div><br><hr>
+    </section>
+    <footer>
+      <div class="q3-a3">
+        <h2 class="header-2">Last Question?</h2>
+		  <div>Gimme an example of a grid-template(code only):</div><br>
+          <textarea id="textarea" required></textarea>
+         <input type="submit" value="submit" id="submit">
+      </div>
+    </footer>
+	</form>
+	</main>
+  </body>
+</html>
