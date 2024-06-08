@@ -124,3 +124,7 @@ p[title="end"]{
   font-size: 14px;
   font-family: courier, arial;
 }
+
+nav.navbar2{
+  padding: 10px;
+}
