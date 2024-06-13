@@ -1,0 +1,227 @@
+*{margin: 0;box-sizing: border-box;font-family:sans-serif, serif, arial;}
+body{counter-reset: section;}
+
+h1.head-1{
+  text-align: center;
+  font: normal small-caps bold 17px/3rem sans-serif, arial;
+  text-shadow: 1px 1px 4px grey;
+  text-decoration: underline 2px black;
+}
+
+p.p-1{
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  padding-bottom: 3px;
+}
+
+div.line{
+  border-bottom: 2px black solid;
+  padding: 0;
+  margin: 0;
+}
+
+section{padding: 10px 5px;}
+
+h3{
+  text-decoration: underline 2px green; 
+  font-size: 16px;
+}
+
+h3::before{
+  counter-increment: section;
+  content: counter(section) ". ";
+}
+div:not(div.line){
+  color: grey;
+  margin: 10px 5px;
+  height: 100px;
+  width: 100px;
+  border: 1px black solid;
+  cursor: pointer;
+  user-select: none;  
+  text-align: center;
+  padding: 5px;
+  font-size: 14px;}
+hr.m-5{margin-top: 205px;}
+section:nth-child(3) div{
+  background-color: green;
+  color: white;
+}
+section:nth-child(4) div{
+  background-color: grey;
+  color: white;
+}
+section:nth-child(5) div{
+  background-color: gold;
+  float: left;
+}
+section:nth-child(5) hr,section:nth-child(6) div.line{
+  display: table;
+  clear: both;
+  visibility: hidden;
+}
+div.animation-6-1, div.animation-6-2{
+  background-color: pink;
+  width: 120px !important;
+  height: 120px !important;
+  font-size: 12px;
+  float: left;
+}
+section:last-child{
+  height: 600px;
+  width: 550px;
+  border: 2px black solid;
+  background-color: tan;
+  margin: 20px;
+}
+
+section:last-child div{
+  height:80px; 
+  width:80px; 
+  margin:10px;}
+
+h3.head-8{
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+div.animation-1:active{animation: animation-1 3s ease .7s infinite alternate forwards;}
+div.animation-2:active{animation: animation-2 2s ease .7s infinite alternate forwards;}
+div.animation-3-1:active{animation: animation-3-1 2s ease .7s infinite alternate forwards;}
+div.animation-3-2:active{animation: animation-3-2 2s ease .7s infinite alternate forwards;}
+div.animation-3-3:active{animation: animation-3-3 2s ease .7s infinite alternate forwards;}
+div.animation-4-1:active{animation: animation-4-1 2s ease .7s infinite alternate forwards;}
+div.animation-4-2:active{animation: animation-4-2 2s ease .7s infinite alternate forwards;}
+div.animation-5-1:active{animation: animation-5-1 2s ease .7s infinite alternate forwards;}
+div.animation-5-2:active{animation: animation-5-2 2s ease .7s infinite alternate forwards;}
+div.animation-5-3:active{animation: animation-5-3 2s ease .7s infinite alternate forwards;}
+div.animation-5-4:active{animation: animation-5-4 2s ease .7s infinite alternate forwards;}
+div.animation-5-5:active{animation: animation-5-5 2s ease .7s infinite alternate forwards;}
+div.animation-5-6:active{animation: animation-5-6 2s ease .7s infinite alternate forwards;}
+div.animation-5-7:active{animation: animation-5-7 2s ease .7s infinite alternate forwards;}
+div.animation-5-8:active{animation: animation-5-8 2s ease .7s infinite alternate forwards;}
+div.animation-6-1:active{animation: animation-6-1 2s ease .7s infinite normal forwards;}
+div.animation-6-2:active{animation: animation-6-2 2s ease .7s infinite reverse both;}
+div.animation-7{animation: animation-7 8s linear .7s infinite alternate forwards;}
+div.paused:hover{animation-play-state: paused !important;}
+
+@keyframes animation-1{
+  from{transform: translate(0,0);}
+  to{transform: translate(500px,0);}
+}
+@keyframes animation-2{
+  from{transform: translate(0,0);}
+  to{transform: translate(0,200px);}
+}
+@keyframes animation-3-1{
+  from{transform: totateZ(0);}
+  to{transform: rotateZ(360deg);}
+}
+@keyframes animation-3-2{
+  from{transform: rotateX(0);}
+  to{transform: rotateX(360deg);}
+}
+@keyframes animation-3-3{
+  from{transform: rotateY(0);}
+  to{transform: rotateY(360deg);}
+}
+@keyframes animation-4-1{
+  from{transform: skewX(0);}
+  to{transform: skewX(120deg);}
+}
+@keyframes animation-4-2{
+  from{transform: skewY(0);}
+  to{transform: skewY(120deg);}
+}
+@keyframes animation-5-1{
+  from{background-color: gold;}
+  to{background-color: cyan;}
+}
+@keyframes animation-5-2{
+  from{background: gold;}
+  to{background-image: linear-gradient(to top left, green , red, gold);}
+}
+@keyframes animation-5-3{
+  from{background: gold;}
+  to{background-image: radial-gradient(brown 30%, gold 40%, black 30%); color: white;}
+}
+@keyframes animation-5-4{
+  from{background-color: gold;}
+  to{background-image: conic-gradient(cyan, blue, lime); color: red;}
+}
+@keyframes animation-5-5{
+  from{background-color: gold; opacity: 0;}
+  to{background-color: pink;}
+}
+@keyframes animation-5-6{
+  from{background-color: gold;}
+  to{filter: blur(5px);}
+}
+@keyframes animation-5-7{
+  from{background-color: gold;}
+  to{filter: grayscale(100%)}
+}
+@keyframes animation-5-8{
+  from{background-color: gold;}
+  to{filter: brightness(150%)}
+}
+@keyframes animation-6-1{
+  from{transform: scale(0,0); margin: 0;}
+  to{transform: scale(2,2); float: none; margin-top:35px; position: relative; top:50%;left:50%;}
+}
+@keyframes animation-6-2{
+  from{transform: scale(0,0); margin: 0;}
+  to{transform: scale(0.5,0.5);}
+}
+@keyframes animation-7{
+  0%{transform: translate(0,0) rotate(0) scale(0, 0) skew(0,0);}
+  25%{transform: translate(400px,0) rotate(90deg) scale(1.2, 1.2) skew(30deg,30deg); background-color: lime;}
+  50%{transform: translate(400px,400px) rotate(180deg) scale(1.5, 1.5) skew(-30deg,-30deg); background-color: rose;}
+  75%{transform: translate(0,400px) rotate(270deg) scale(1, 1) skew(-35deg, -40deg); background-color: aquamarine;}
+  100%{transform: translate(0,0) rotate(360deg) scale(0.7, 0.7) skew(0, 0); background-color: white}
+}
+
+
+@media screen and (max-width: 600px){
+  div:not(div.line){
+    margin: 5px;
+    height: 80px;
+    width: 80px;
+    font-size: 11px;
+}
+  hr.m-5{margin-top: 105px;}
+    
+  @keyframes animation-1{
+    from{transform: translate(0,0);}
+    to{transform: translate(220px,0);}
+  }
+  @keyframes animation-2{
+    from{transform: translate(0,0);}
+    to{transform: translate(0,100px);}
+  }
+  
+  div.animation-6-1, div.animation-6-2{
+    height: 100px !important;
+    width: 100px !important;
+  }
+  
+  section:last-child{
+    height: 320px;
+    width: 320px;
+  }
+  
+  section:last-child div{height: 65px; width: 65px;}
+  
+  @keyframes animation-7{
+    0%{transform: translate(0, 0) scale(0, 0) skew(0,0);}
+    25%{transform: translate(200px, 0) scale(1.2, 1.2) skew(10deg, 10deg); background: brown;}
+    50%{transform: translate(200px, 175px) scale(1.4, 1.4) skew(-10deg, -10deg); background: orange;}
+    75%{transform: translate(0, 175px) scale(1, 1) skew(25deg, 25deg); background: purple;}
+    100%{transform: translate(0, 0) scale(0.7, 0.7) skew(3deg,3deg); background: azure}
+  }
+  
+  div.animation-7:active{animation-play-state: paused;}
+}
+
+footer{text-align: center;}
