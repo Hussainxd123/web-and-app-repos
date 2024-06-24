@@ -1,0 +1,159 @@
+body{
+  counter-reset: section;
+}
+
+.head-1{
+  text-align: center;
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+.p-1{
+  font-size: 14px;
+  text-align: center;
+}
+
+h3{
+  text-decoration: underline 2px blue;
+  counter-increment: section;
+}
+
+h3::before{content: "" counter(section) ". ";}
+h3::after{content: " :"}
+
+ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  overflow: hidden;
+}
+
+li{float: left}
+
+li a,.dropbtn{
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 14px 16px;
+  text-align: center;
+}
+
+li a:hover, li a:active{background-color: red;}
+
+li.dropdown{display: inline-block;}
+.dropdown:hover .dropdown-content, .dropdown:active .dropdown-content{display: block;}
+.dropdown-content{
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  background-color: white;
+  box-shadow: rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a{
+  color: black;
+  text-align: left;
+  padding: 12px 14px;
+  display: block;
+}
+
+.dropdown-content a:hover, .dropdown-content a:active{
+  background-color: lime;
+}
+
+.container{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.tooltip{
+  display: inline-block;
+  position: relative;
+  border-bottom: 2px black dotted;
+}
+
+.tooltiptext{
+  visibility: hidden;
+  position: absolute;
+  width: 80px;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext, .tooltip:active .tooltiptext{visibility: visible;}
+
+.left{
+  position: absolute;
+  top: 1px;
+  right: 105%;
+}
+
+.left::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+}
+
+.right{
+  position: absolute;
+  top: 1px;
+  left: 105%;
+}
+
+.right::after{
+  content: " ";
+  right: 100%;
+  top: 50%;
+  position: absolute;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+.top{
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -40px;
+}
+
+.top::after{
+  content: " ";
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.bottom{
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -40px;
+}
+
+.bottom::after{
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
